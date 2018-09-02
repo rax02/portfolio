@@ -1,7 +1,16 @@
+@keyframes example {
+    from {background-color: darkcyan;}
+    to {background-color: white;}
+}
+
+
+
 .head{
     font-family: 'Gill Sans';
     color: darkcyan;
     font-size: 5em;
     text-align: center;
-    animation: ease-in;
+    animation-name: example;
+    animation-duration: 10000ms;
+    animation-delay: 2000ms;
 }
