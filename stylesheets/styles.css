@@ -3,4 +3,5 @@
     color: darkcyan;
     font-size: 5em;
     text-align: center;
+    animation: ease-in;
 }
