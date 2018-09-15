@@ -1,16 +1,54 @@
 @keyframes example {
-    from {background-color: darkcyan;}
-    to {background-color: white;}
+    from {color: white;
+        font-size: 0em;}
+    to {color: darkcyan;
+        font-size: 5em;}
+}
+body{
+    margin: 0%
 }
 
 
-
 .head{
+    animation-name: example;
+    animation-duration: 2ms;
     font-family: 'Gill Sans';
     color: darkcyan;
     font-size: 5em;
     text-align: center;
-    animation-name: example;
-    animation-duration: 20000ms;
+    
+}
 
+.head:hover{
+   
+    color:red;
+}
+
+@keyframes loading1 {
+    from {widows: 0%}
+    to {width:50%}
+    
+}
+@keyframes loading2 {
+    from {width:50%;
+    float:right}
+    to {width:0%;
+    float:left}
+    
+}
+#loading1{
+    animation-name: loading1;
+    animation-duration: 2000ms;
+    float:left;
+    width:50%;
+    background-color: gold;
+}
+
+#loading2{
+    animation-name: loading2;
+    animation-delay: 2000ms;
+    animation-duration: 2000ms;
+    float:right;
+    width:50%;
+    background-color: rgb(196, 37, 37);
 }
