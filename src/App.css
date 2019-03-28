@@ -4,6 +4,9 @@
   background-color: #eeeeee;
   color:#282c34;
 }
+html{
+  scroll-behavior: smooth;
+}
 nav{
   display: flex;
   flex-direction: row;
@@ -17,9 +20,14 @@ nav{
  
   max-height: 5vh;
 }
-.work{
+.emblem2{
+  max-height: 25vh;
+}
+.navText{
 color:whitesmoke;
 font-size:4vh; 
+margin:1vh;
+text-decoration-line: none;
 }
 .text{
   font-size: 5vh;

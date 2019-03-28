@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import emblem from './RKmark2.jpg';
+import emblem from './RKmark2.png';
+import Work from './Work';
+// import emblem2 from './RKmark4.png';
+
 import './App.css';
 
 class App extends Component {
@@ -8,9 +11,12 @@ class App extends Component {
       <div className="App">
         <nav>
           <img className='emblem' src={emblem}></img>
-          <div className='work'>Work</div>
+          <div> <a href='#work' className='navText'> Work</a>
+            <a href='#contact' className='navText'> Contact</a></div>
         </nav>
         <div className='text'>
+          {/* <img className='emblem2' src={emblem2}></img> */}
+          <br></br>
           <strong>Hi, I'm Ravi</strong><br></br>
           a multidisciplinary designer and developer<br></br>
           with a focus on UX/UI design.<br></br>
@@ -32,6 +38,13 @@ class App extends Component {
           <Button1>Node.js</Button1>
           <Button1>Data Visualisation</Button1>
         </div>
+        <hr width="80%"></hr>
+        <div id="work"><Work></Work></div>
+        <hr width="80%"></hr>
+        <div id="contact">
+          <h1> Contact</h1><br></br>
+          0001rkm@gmail.com</div>
+
       </div>
     );
   }

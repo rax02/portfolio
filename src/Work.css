@@ -1,0 +1,39 @@
+.flexo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10%;
+}
+#card1{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border-radius: 5px;
+    margin: 1vh;
+    
+    
+}
+a{
+    text-decoration-line: none;
+}
+#card2{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border-radius: 5px;
+    margin: 1vh;
+    width:15rem;
+    height: 20rem;
+    color: whitesmoke;    
+    background-color: #282c34;
+    
+    
+}
+#card3{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border-radius: 5px;
+    margin: 1vh;
+    width:30rem;
+    height: 20rem;
+    color: whitesmoke;    
+    background-color: #282c34;
+    
+    
+}
