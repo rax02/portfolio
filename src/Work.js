@@ -19,8 +19,43 @@ import image16 from './images/shipponow.jpg';
 import image17 from './images/thefinalproject.jpg';
 import image18 from './images/twigg.jpg';
 import image19 from './images/incentivegames.jpg';
+import leftArrow from './images/incentivegames.jpg';
+import rightArrow from './images/incentivegames.jpg';
+
+
+const imageSource = [image1, image2, image10];
+var x = 0;
 
 class Work extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentImageIndex: 0
+        };
+
+        this.nextSlide = this.nextSlide.bind(this);
+        this.previousSlide = this.previousSlide.bind(this);
+    }
+    previousSlide = () => {
+
+
+        if (x != 0) {
+            x--;
+        }
+        this.setState({ currentImageIndex: x });
+    }
+
+    nextSlide = () => {
+
+
+        if (x != imageSource.length - 1) {
+            x++;
+        }
+        this.setState({ currentImageIndex: x });
+
+    }
+
     render() {
         return (
             <div><h1>Work</h1>
@@ -29,14 +64,21 @@ class Work extends Component {
                 <div className='flexo'>
                     <a href='https://drive.google.com/file/d/0B1SpBSUpxuz4Q2hiY0ZFUllzcXVDOTZITnR5a3NWSUprQjJF/view?usp=sharing' target='_blank'>
                         <Card2><h3>UES</h3>
-                            Unified Emergency Service for India.</Card2></a>
+                            Unified Emergency Service for India.(A hackathon project)</Card2></a>
                     <a><Card2><h3>User Research</h3></Card2></a>
                     <a><Card2><h3>Persona</h3></Card2></a>
                 </div>
                 <hr width="50%"></hr>
                 <h3>Web Design & Development</h3>
-                <div className='flexo'>
-                    <a><Card3></Card3></a></div>
+                {/* <a><Card3></Card3></a> */}
+                <div>
+
+                    <div onClick={this.previousSlide}><img src={leftArrow}></img></div>
+                    <ImageSlide source={imageSource[this.state.currentImageIndex]}></ImageSlide>
+
+                    <div onClick={this.nextSlide}><img src={rightArrow}></img></div>
+
+                </div>
                 <hr width="50%"></hr>
                 <h3>Logo Design</h3>
                 <div className='flexo'>
@@ -82,4 +124,12 @@ const Card3 = (props) => {
         <div id='card3'>{props.children}</div>
     );
 }
+
+const ImageSlide = (props) => {
+    return (
+        <div><img src={props.source}></img></div>
+    );
+}
+
+
 export default Work;
